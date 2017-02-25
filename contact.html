@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1" />
+	<title>Contact - Supposedly Wonderful Future</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="dependencies/jquery-1.12.4.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="bckg"></div>
+	<div class="main">
+		<!-- header -->
+		<img src="images/main.jpg" class="top" />
+		<div class="gl-outer"><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=865246895"><img src="images/gl.png" class="gl-image" /></a></div>
+		<h1>SUPPOSEDLY WONDERFUL FUTURE</h1>
+		<h2>a sci-fi adventure game about screens, small rooms, and existential dread</h2>
+		<div class="nav">
+			<a href="index.html">About</a><!--
+			--><a href="demo.html">Demo</a><!--
+			--><a href="credits.html">Credits</a><!--
+			--><a href="contact.html">Contact</a>
+		</div>
+		
+		<!-- contact -->
+		<div class="contact">
+			<div class="contact-inner">
+				<div class="contact-desc">For any questions or feedback, please fill out the form below.</div>
+				<div class="contact-success" style="display:none">Your message has been sent. Thanks!</div>
+				<form id="contactForm" accept-charset=utf-8 onsubmit="return ContactValidation();" action="https://docs.google.com/forms/d/e/1FAIpQLSeWhdF9TEdx9QPfWvCi86KZpcyUY1sIHWzmZ-hmWvuQF8Mllw/formResponse" target="hidden_iframe">
+					<div>Subject</div>
+					<input type="text" name="entry.1078780580">
+					<div>E-mail (required if you'd like to hear back)<span id="errorA" style="display:none">incorrect e-mail</span></div>
+					<input type="text" name="entry.2114835811" id="msgAddress">
+					<div>Message (required)<span id="errorB" style="display:none">needs to be at least 20 characters long</span></div>
+					<textarea name="entry.671074741" id="msgText"></textarea>
+					<input type="submit" value="Send">
+				</form>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload="if (goForm) Submitted();"></iframe>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
