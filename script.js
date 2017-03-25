@@ -1,13 +1,16 @@
 //var timer;
 var title, subtitle, about, cred;
 var video, f1, f2, img;
+var banner, bGL, bPK;
 var bpH = 0; //current breakpoint for header
 var bpM = 0; //current breakpoint for main page
 var bpC = 0; //current breakpoint for credits
+var bpB = 0; //current breakpoint for buttons
 var bpF = false; //smaller font size
 
 $(document).ready(function(){
     title = $("h1"); subtitle = $("h2"); about = $(".about"); cred = $(".credits");
+	banner = $(".top"); bGL = $(".gl-image"); bPK = $(".pk-image");
 	if (about.length > 0) {
 		video = $("#video"); f1 = $("#feat1"); f2 = $("#feat2");
 		img = [$("#I1"), $("#I2"), $("#I3"), $("#I4"), $("#I5"), $("#I6"), $("#I7"), $("#I8"), $("#I9")];
@@ -29,6 +32,17 @@ else if (W < 1024 && W >= 850 && bpH != 1) { title.attr("style","font-size: 50px
 else if (W < 850 && W >= 760 && bpH != 2) { title.attr("style", "font-size: 45px"); subtitle.attr("style", "font-size: 20px"); subtitle.show(); bpH = 2; }
 else if (W < 760 && W >= 680 && bpH != 3) { title.attr("style", "font-size: 40px"); subtitle.attr("style", "font-size: 16px"); subtitle.show(); bpH = 3; }
 else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top: 0.25em"); subtitle.hide(); bpH = 4; }
+	
+	//buttons
+	if (W >= 800 && bpB != 0) {
+		bGL.removeClass(); bPK.removeClass(); bGL.addClass("gl-image"); bPK.addClass("pk-image"); banner.show(); bpB = 0;
+	}
+	else if (W < 800 && W >= 570 && bpB != 1) {
+		bGL.removeClass(); bPK.removeClass(); bGL.addClass("gl-image"); bPK.addClass("pk-image-2"); banner.show(); bpB = 1;
+	}
+	else if (W < 570 && bpB != 2) {
+		bGL.removeClass(); bPK.removeClass(); bGL.addClass("bt-image-no"); bPK.addClass("bt-image-no"); banner.hide(); bpB = 2;
+	}
 	
 	if (about.length > 0) {
 		//about - font

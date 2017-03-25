@@ -21,8 +21,11 @@ h2 { font-family: 'Clear Sans', Arial, sans-serif; font-size: 25px; color: rgb(0
 }
 .main { max-width: 1280px; margin: auto; text-align: center; }
 .top { width: 100%; display: block; }
-.gl-outer { position: relative; }
-.gl-image { position: absolute; bottom: 10px; right: 10px; }
+.bt-outer { position: relative; }
+.gl-image { position: absolute; top: 10px; left: 10px; }
+.pk-image { position: absolute; top: 10px; left: 170px; }
+.pk-image-2 { position: absolute; top: 71px; left: 10px; }
+.bt-image-no { padding-top: 10px; }
 .nav {
 	font-family: 'Clear Sans', Arial, sans-serif; font-size: 28px; color: white;
 	border-bottom: 1px solid white;
