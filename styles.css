@@ -25,6 +25,10 @@ h2 { font-family: 'Clear Sans', Arial, sans-serif; font-size: 25px; color: rgb(0
 .gl-image { position: absolute; top: 10px; left: 10px; }
 .pk-image { position: absolute; top: 10px; left: 170px; }
 .pk-image-2 { position: absolute; top: 71px; left: 10px; }
+.tw-image { position: absolute; top: 10px; left: 330px; }
+.tw-image-2 { position: absolute; top: 10px; left: 170px; }
+.fb-image { position: absolute; top: 10px; left: 390px; }
+.fb-image-2 { position: absolute; top: 71px; left: 170px; }
 .bt-image-no { padding-top: 10px; }
 .nav {
 	font-family: 'Clear Sans', Arial, sans-serif; font-size: 28px; color: white;
@@ -81,7 +85,9 @@ h2 { font-family: 'Clear Sans', Arial, sans-serif; font-size: 25px; color: rgb(0
 .demo { max-width: 550px; margin: auto; font-family: 'Clear Sans', Arial, sans-serif; font-size: 20px; color: rgb(187,224,255); text-align: center; }
 .demo-inner { margin: 1em 1% 0 1%; }
 .demo-inner a { text-decoration: none; }
-.demo-inner iframe { width: 100%; height: 167px; }
+.demo-inner #humble-outer { max-width: 450px; margin: auto; }
+.demo-inner #humble { width: 100%; border: none; }
+.demo-inner #itch { /*margin-top: 0.6em;*/ width: 100%; height: 167px; }
 .d-button { margin-top: 0.6em; border: 1px solid white; font-size: 20px; color: white; background-color: #0d0d0d; }
 
 /* CONTACT */
