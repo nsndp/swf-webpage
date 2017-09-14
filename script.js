@@ -1,6 +1,6 @@
 //var timer;
 var title, subtitle, about, cred;
-var video, f1, f2, img;
+var video, vidGP, vidST, f1, f2, img;
 var banner, bGL, bPK, bTW, bFB;
 var bpH = 0; //current breakpoint for header
 var bpM = 0; //current breakpoint for main page
@@ -12,7 +12,7 @@ $(document).ready(function(){
     title = $("h1"); subtitle = $("h2"); about = $(".about"); cred = $(".credits");
 	banner = $(".top"); bGL = $(".gl-image"); bPK = $(".pk-image"); bTW = $(".tw-image"); bFB = $(".fb-image"); 
 	if (about.length > 0) {
-		video = $("#video"); f1 = $("#feat1"); f2 = $("#feat2");
+		video = $("#video"); vidGP = $("#vidGP"); vidST = $("#vidST"); f1 = $("#feat1"); f2 = $("#feat2");
 		img = [$("#I1"), $("#I2"), $("#I3"), $("#I4"), $("#I5"), $("#I6"), $("#I7"), $("#I8"), $("#I9")];
 	}
 	Adjust();
@@ -57,7 +57,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		//about - layout
 		if (W >= 800 && bpM != 0) {
 			bpM = 0;
-			video.insertBefore("#premise1"); video.removeClass(); video.addClass("trailer");
+			//video.insertBefore("#premise1"); video.removeClass(); video.addClass("trailer");
+			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-column-1"); vidST.addClass("trailer-column-2");
 			f1.addClass("features-column-1"); f2.addClass("features-column-2");
 			img[0].removeClass(); img[0].addClass("imL"); img[1].removeClass(); img[1].addClass("imC"); img[2].removeClass(); img[2].addClass("imR");
 			img[3].removeClass(); img[3].addClass("imL"); img[4].removeClass(); img[4].addClass("imC"); img[5].removeClass(); img[5].addClass("imR");
@@ -65,7 +66,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		}
 		else if (W >= 500 && W < 800 && bpM != 1) {
 			bpM = 1;
-			video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
+			//video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
+			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
 			f1.removeClass(); f2.removeClass();
 			img[0].removeClass(); img[0].addClass("imL2"); img[1].removeClass(); img[1].addClass("imR2"); img[2].removeClass(); img[2].addClass("imL2");
 			img[3].removeClass(); img[3].addClass("imR2"); img[4].removeClass(); img[4].addClass("imL2"); img[5].removeClass(); img[5].addClass("imR2");
@@ -73,7 +75,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		}
 		else if (W < 500 && bpM != 2) {
 			bpM = 2;
-			video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
+			//video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
+			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
 			f1.removeClass(); f2.removeClass();
 			for (i = 0; i < img.length; i++) { img[i].removeClass(); img[i].addClass("im1"); }
 		}
