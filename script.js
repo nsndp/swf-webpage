@@ -57,8 +57,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		//about - layout
 		if (W >= 800 && bpM != 0) {
 			bpM = 0;
-			//video.insertBefore("#premise1"); video.removeClass(); video.addClass("trailer");
-			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-column-1"); vidST.addClass("trailer-column-2");
+			video.removeClass(); video.addClass("trailer");
+			//vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-column-1"); vidST.addClass("trailer-column-2");
 			f1.addClass("features-column-1"); f2.addClass("features-column-2");
 			img[0].removeClass(); img[0].addClass("imL"); img[1].removeClass(); img[1].addClass("imC"); img[2].removeClass(); img[2].addClass("imR");
 			img[3].removeClass(); img[3].addClass("imL"); img[4].removeClass(); img[4].addClass("imC"); img[5].removeClass(); img[5].addClass("imR");
@@ -66,8 +66,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		}
 		else if (W >= 500 && W < 800 && bpM != 1) {
 			bpM = 1;
-			//video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
-			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
+			video.removeClass(); video.addClass("trailer-full");
+			//vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
 			f1.removeClass(); f2.removeClass();
 			img[0].removeClass(); img[0].addClass("imL2"); img[1].removeClass(); img[1].addClass("imR2"); img[2].removeClass(); img[2].addClass("imL2");
 			img[3].removeClass(); img[3].addClass("imR2"); img[4].removeClass(); img[4].addClass("imL2"); img[5].removeClass(); img[5].addClass("imR2");
@@ -75,8 +75,8 @@ else if (W < 680 && bpH != 4) { title.attr("style", "font-size: 35px; margin-top
 		}
 		else if (W < 500 && bpM != 2) {
 			bpM = 2;
-			//video.insertAfter("#premise2"); video.removeClass(); video.addClass("trailer-alt");
-			vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
+			video.removeClass(); video.addClass("trailer-full");
+			//vidGP.removeClass(); vidST.removeClass(); vidGP.addClass("trailer-full"); vidST.addClass("trailer-full");
 			f1.removeClass(); f2.removeClass();
 			for (i = 0; i < img.length; i++) { img[i].removeClass(); img[i].addClass("im1"); }
 		}

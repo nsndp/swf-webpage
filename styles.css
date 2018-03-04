@@ -36,6 +36,7 @@ h2 { font-family: 'Clear Sans', Arial, sans-serif; font-size: 25px; color: rgb(0
 	margin: auto; padding-bottom: 0.2em;
 }
 .nav a { margin: 0 0.6em; display: inline-block; color: white; text-decoration: none; }
+.nav a.toplink { }
 
 /* ABOUT */
 .about {
